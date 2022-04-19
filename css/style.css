@@ -41,7 +41,7 @@
 }
 
 .navbar li a:hover {
-  background: skyblue;
+  background: #1E6583;
 }
 
 /*section 1 */
@@ -101,6 +101,7 @@
 }
 
 /* section-2*/
+/*about*/
 .about-section {
   display: flex;
   flex-direction: row;
@@ -135,27 +136,54 @@
   color: white;
 }
 
-
+/*join*/
 .join-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background: black;
-  padding-top: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px ;
   text-align: center;
-}
-
-.join-img {
-  background: url('../assets/about2.jpg') no-repeat;
-  background-origin: content-box;
-  padding: 30px;
-}
-
-.join-section h1 {
   font-size: 30px;
   color: white;
 }
 
 .join-section p {
-  color: black;
-  font-size: 15px;
+  font-size: 25px;
+  margin-bottom:  25px;
+}
+.join-section div {
+  display:  inline-block ;
+
+}
+.join-box {
+  max-width: 50%;
+  height:   auto;
+  margin-left: 30px;
+}
+.join-box a {
+  color:  black ;
+  text-decoration:  none;
+  background: rgb(80,184,231);
+  border-radius:  25px;
+  text-align:   center ;
+  padding:  10px 15px;
+} 
+
+.join-box a:hover {
+  background: rgba(80,184,231,0.6) ;
+}
+
+.image-box {
+  box-sizing: border-box;
+  width: fit-content;
+}
+.join-section img {
+  max-width: 70%;
+  height: auto;
+
 }
 
 /* section-3 */
