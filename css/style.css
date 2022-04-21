@@ -189,6 +189,7 @@
 /* section-3 */
 #section-3{
   padding-top: 90px;
+  padding-bottom: 90px;
   background-color: #00092C;
 }
 
@@ -220,6 +221,9 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  padding-right: 75px;
+  padding-left: 75px;
 }
 
 .flex-outer > li:not(:last-child) {
@@ -231,6 +235,7 @@
   max-width: 220px;
   color: white;
   font-size: 20px;
+  padding-right: 20px;
 }
 
 .flex-outer li button {
@@ -249,7 +254,10 @@
   padding: 15px;
   border: none;
   font-size: 12px;
+  width: 70%;
 }
+
+.flex-outer
 
 .flex-outer li input:focus {
   border: 2px solid #F900BF;
