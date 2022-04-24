@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
 }
-/* navbar section */
+
+
 .navbar {
   position: relative;
   display: flex;
@@ -12,7 +13,6 @@
   padding: 10px 10px;
   justify-content: flex-end;
   align-items: center;
-
 }
 
 .name-header {
@@ -24,6 +24,10 @@
 .name-header > a {
   text-decoration: none;
   color: inherit;
+}
+
+.navbar > .bar-home {
+  display: none;
 }
 
 .navbar ul {
@@ -56,6 +60,10 @@
   background: #1E6583;
 }
 
+.sidebar {
+  display: none;
+}
+
 /*section 1 */
 .section-1 {
   display: block;
@@ -83,13 +91,11 @@
 }
 
 .product-image img {
+  max-width: 18%;
   margin-left: 8px;
   margin-right: 8px;
 }
 
-.product-image img:hover{
-  background : rgb(100 116 139);
-}
 .download {
   display: block;
   background: #4700D8;
@@ -116,15 +122,17 @@
 /*about*/
 .about-section {
   background: #22577E;
+  padding-bottom: 20px ;
+
 }
 
 .about-section img {
-  padding: 20px 0;
   max-width: 40%;
   height: auto;
   display: block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: auto;
+  margin-top: 20px;
 }
 
 .about-box {
@@ -201,8 +209,7 @@
 
 /* section-3 */
 #section-3{
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding: 45px 0;
   background-color: #00092C;
 }
 
@@ -306,6 +313,10 @@ footer {
   padding-bottom: 10px;
 }
 
+ .icon-footer  ul > li >:nth-child(2) {
+  display: none;
+}
+
 .icon-footer ul{
   margin-top: 30px;
   list-style-type: none;
@@ -315,10 +326,208 @@ footer {
   align-items: centerl;  
 }
 
+
 .list-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 0 30px;
+}
+
+
+@media only screen and (max-width: 480px) {
+  /*navbar & sidebar */
+  .navbar > ul {
+    display: none
+  }
+
+  .navbar{
+    justify-content: center;
+  }
+
+  .navbar > .name-header {
+    margin-right: auto;
+
+  }
+    
+  .navbar > .bar-home {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    background-color: rgb(15 23 42);
+    width: 40%;
+    height: 100vh;
+  }
+
+  .sidebar > .name-header {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  }
+
+  .sidebar ul li {
+    list-style-type: none;
+    display: flex;
+    border: 2px solid black;
+  }
+  .sidebar ul li a {
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+
+
+  /*product*/
+  .product-section {
+    padding: 120px 60px;
+    font-size: 25px;
+  }
+
+  .product-section h1 {
+    padding-bottom: 25px;
+  }
+
+  .product-image {
+    flex-wrap: wrap;
+    padding: 30px 20px ;
+  }
+
+  .product-image img {
+    max-width: 30%;
+    margin: 8px;
+  }
+
+  .download {
+    padding: 10px 5px;
+    width: 140px;
+    font-size: 16px;
+  }
+
+  /*about */
+
+  .about-box p{
+    font-size: 20px;
+  } 
+
+  .about-box h1 {
+    font-size: 3em;
+    padding: 0;
+  }
+
+  .about-section img {
+    max-width: 60%;
+  }
+
+  /*join */
+
+  .join-section {
+    flex-direction: column;
+    font-size: 25px;
+  }
+
+  .join-box {
+    margin: auto;
+    max-width: 90%;
+    padding-bottom: 50px;
+  }
+
+  .join-box h1 {
+    margin-bottom: 20px;
+  }
+
+  .join-box a {
+    padding: 7px 13px;
+    font-size: 23px;
+  }
+
+  /*contact*/
+
+
+  .section-3 {
+    background-color: #203239;
+    padding: 45px 0;
+  }
+
+  .contact-section {
+    max-width: 100%;
+    padding: 25px 0
+  }
+
+  .flex-outer li {
+    flex-direction: column;
+  }
+
+  .flex-outer li > label {
+    max-width: fit-content;
+    max-height: 50px;
+  }
+
+  .text-footer {
+    font-size: 16px;
+  }
+
+  .text-footer h3 {
+    font-size: 20px;
+  }
+
+  .icon-footer ul > li >:nth-child(2){
+    display: inline-block;
+  }
+
+  .icon-footer  ul > li >:nth-child(1){
+    display: none;
+  }
+
+  .end-footer *{
+    font-size: 17px;
+  }
+
+
+
+}
+
+@media only screen and (min-width: 767px) {
+   .section-3 {
+    background-color: #203239;
+    padding: 65px 0;
+  }
+
+  .contact-section {
+    max-width: 80%;
+    padding: 25px 0
+  }
+
+  .flex-outer li {
+    flex-direction: column;
+  }
+
+  .flex-outer li > label {
+    max-width: fit-content;
+    max-height: 50px;
+  }    
+}
+
+/* navbar section */
+@media only screen and (min-width: 992px){
+  .section-3 {
+    background-color: #203239;
+    padding: 85px 0;
+  }
+
+  .contact-section {
+    max-width: 80%;
+    padding: 25px 0
+  }
+
+  .flex-outer li {
+    flex-direction: column;
+  }
+
+  .flex-outer li > label {
+    max-width: fit-content;
+    max-height: 50px;
+  }    
 }

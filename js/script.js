@@ -25,5 +25,14 @@ for(let i = 0; i < images.length; i++){
 		e.preventDefault();
 	})
 }
+//mobile screen
+const barHome = document.getElementsByClassName('bar-home');
+const sidebar = document.getElementsByClassName('sidebar')[0];
+const namaHeader = document.querySelector(".name-header");
+barHome[0].addEventListener('click',e => {
+	namaHeader.style.display = 'none';
+	sidebar.style.display = 'block';
+	e.preventDefault();
+})
 
 
